@@ -23,7 +23,7 @@ The controller sends the most significant bit first. It samples MISO on rising S
 Install Icarus Verilog and Python with Matplotlib, then run:
 
 ```bash
-./scripts/run_sim.sh
+bash ./scripts/run_sim.sh
 ```
 
 The testbench exchanges four byte patterns with a simple behavioral slave. The script runs divider values 1, 2, and 5. It saves the VCD, simulation log, and a PNG timing view in `docs/waveforms/`.
