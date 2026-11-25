@@ -1,8 +1,8 @@
 # SPI Master Controller
 
-I built this small SPI master to practise serial data transfer and clocked shift registers in Verilog. It handles one 8-bit word per start pulse and follows SPI Mode 0.
+This project implements a small SPI master for practising serial data transfer and clocked shift registers in Verilog. It handles one 8-bit word per start pulse and follows SPI Mode 0.
 
-The master sends the most significant bit first. It samples MISO on rising SCLK edges and changes MOSI on falling edges. The `CLKS_PER_HALF` parameter controls the SCLK divider.
+The master sends the most significant bit first, samples MISO on rising SCLK edges, and changes MOSI on falling edges. The `CLKS_PER_HALF` parameter controls the SCLK divider.
 
 ![SPI master architecture](docs/architecture.svg)
 
