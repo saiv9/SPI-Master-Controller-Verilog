@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" rx="18" fill="#f5f8fc"/>
+<text x="42" y="55" font-family="Arial" font-size="30" font-weight="700" fill="#1f2a3d">SPI Master Controller</text>
+<text x="42" y="84" font-family="Arial" font-size="15" fill="#526680">Mode 0, 8-bit transfer, most significant bit first</text>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6 Z" fill="#355f91"/></marker><marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6 Z" fill="#5b805f"/></marker></defs>
+<g font-family="Arial">
+<rect x="45" y="145" width="220" height="115" rx="14" fill="#fff" stroke="#26364b" stroke-width="2"/>
+<text x="68" y="180" font-size="19" font-weight="700" fill="#1f2a3d">Host interface</text><text x="68" y="212" font-size="15" fill="#526680">start, tx_data</text><text x="68" y="237" font-size="13" fill="#71839b">Accepts one byte</text>
+<rect x="340" y="125" width="295" height="155" rx="14" fill="#eaf0f7" stroke="#526984" stroke-width="2"/>
+<text x="385" y="160" font-size="20" font-weight="700" fill="#1f2a3d">Control and divider</text><text x="385" y="195" font-size="15" fill="#344b68">FSM, bit counter</text><text x="385" y="222" font-size="15" fill="#344b68">SCLK timing, chip select</text><text x="385" y="251" font-size="13" fill="#71839b">busy and done status</text>
+<rect x="700" y="145" width="210" height="105" rx="14" fill="#fff" stroke="#26364b" stroke-width="2"/>
+<text x="730" y="180" font-size="19" font-weight="700" fill="#1f2a3d">TX shift register</text><text x="730" y="211" font-size="15" fill="#526680">MSB first</text><text x="730" y="232" font-size="13" fill="#71839b">Drives MOSI</text>
+<rect x="700" y="345" width="210" height="105" rx="14" fill="#fff" stroke="#26364b" stroke-width="2"/>
+<text x="730" y="380" font-size="19" font-weight="700" fill="#1f2a3d">RX shift register</text><text x="730" y="411" font-size="15" fill="#526680">Samples MISO</text><text x="730" y="432" font-size="13" fill="#71839b">Copies to rx_data</text>
+<rect x="980" y="215" width="175" height="165" rx="14" fill="#edf4ed" stroke="#5b805f" stroke-width="2"/>
+<text x="1018" y="250" font-size="19" font-weight="700" fill="#243a2a">SPI device</text><text x="1018" y="285" font-size="15" fill="#526680">SCLK</text><text x="1018" y="310" font-size="15" fill="#526680">MOSI / MISO</text><text x="1018" y="335" font-size="15" fill="#526680">CS active low</text>
+<path d="M265 200 H340" stroke="#355f91" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M635 175 H700" stroke="#355f91" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M910 195 H980" stroke="#355f91" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M980 345 H945 V398 H910" stroke="#5b805f" stroke-width="3" fill="none" marker-end="url(#g)"/>
+<path d="M700 398 H635 V245" stroke="#5b805f" stroke-width="2.5" stroke-dasharray="7 6" fill="none" marker-end="url(#g)"/>
+<path d="M485 280 V520 H150 V260" stroke="#73859d" stroke-width="2" stroke-dasharray="7 6" fill="none"/>
+<text x="45" y="565" font-size="16" font-weight="700" fill="#1f2a3d">Transfer sequence</text>
+<text x="45" y="596" font-size="14" fill="#526680">Load byte  →  assert CS  →  shift and sample eight bits  →  pulse done  →  return to idle</text>
+<text x="45" y="625" font-size="12" fill="#71839b">SCLK idles low. Data is sampled on rising edges and changes on falling edges.</text>
+</g></svg>
