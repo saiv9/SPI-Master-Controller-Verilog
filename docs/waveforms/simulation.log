@@ -1,0 +1,21 @@
+VCD info: dumpfile build/spi_master.vcd opened for output.
+PASS: TX=a5 RX=3c
+PASS: TX=00 RX=ff
+PASS: TX=ff RX=00
+PASS: TX=96 RX=69
+PASS: all SPI frames completed with divider 1
+tb/tb_spi_master.v:105: $finish called at 785000 (1ps)
+VCD info: dumpfile build/spi_master.vcd opened for output.
+PASS: TX=a5 RX=3c
+PASS: TX=00 RX=ff
+PASS: TX=ff RX=00
+PASS: TX=96 RX=69
+PASS: all SPI frames completed with divider 2
+tb/tb_spi_master.v:105: $finish called at 1425000 (1ps)
+VCD info: dumpfile build/spi_master.vcd opened for output.
+PASS: TX=a5 RX=3c
+PASS: TX=00 RX=ff
+PASS: TX=ff RX=00
+PASS: TX=96 RX=69
+PASS: all SPI frames completed with divider 5
+tb/tb_spi_master.v:105: $finish called at 3345000 (1ps)
